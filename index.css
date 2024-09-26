@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: black;
+  color: white;
+}
+
+.web-logo {
+  height: 50px;
+  width: 50px;
+}
+
+.logo a {
+  color: white;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-left: 2rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ff6347;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+}
+
+/* Card sectin */
+
+.titles {
+  align-items: center;
+  text-align: center;
+  font-size: large;
+}
+.hero {
+  height: 100vh;
+  background: url("https://i.ibb.co.com/wc2Q3cg/photo-1699891730676-037bed3c1bed.jpg");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: large;
+  color: rgb(26, 168, 196);
+}
+
+.hero-content {
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+/* Cards Section Styles */
+.cards-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card h2 {
+  margin: 10px;
+  font-size: 25px;
+}
+
+.card p {
+  padding: 0 1rem 1rem;
+  font-size: 1rem;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: #333;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .nav-links li {
+    margin: 1rem 0;
+    text-align: center;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .navbar.active .nav-links {
+    display: flex;
+  }
+}
